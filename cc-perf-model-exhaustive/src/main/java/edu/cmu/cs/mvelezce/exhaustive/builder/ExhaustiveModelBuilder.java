@@ -1,4 +1,4 @@
-package edu.cmu.cs.mvelezce.exhaustive.model;
+package edu.cmu.cs.mvelezce.exhaustive.builder;
 
 import de.fosd.typechef.featureexpr.FeatureExpr;
 import edu.cmu.cs.mvelezce.builder.E2EModelBuilder;
