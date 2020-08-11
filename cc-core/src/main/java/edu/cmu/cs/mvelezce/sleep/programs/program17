@@ -1,8 +1,0 @@
-a=A
-b=B
-if(a) {
-    sleep(a)
-    sleep(b)
-    sleep(3)
-}
-sleep(2)

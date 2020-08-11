@@ -1,7 +1,0 @@
-(Intercept)
-x1
-x3
-x4
-x5
-x8
-x9

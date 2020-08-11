@@ -1,9 +1,0 @@
-digraph create {
-node [shape=record];
-894086915 [label="L0\lLINENUMBER 327 L0\lLDC \"cd090656-92a5-4134-ad24-3ef4e85afa8b\"\lINVOKESTATIC edu/cmu/cs/mvelezce/tool/analysis/region/Regions.enter (Ljava/lang/String;)V\lALOAD 0\lINVOKESPECIAL org/prevayler/PrevaylerFactory.snapshotManager ()Lorg/prevayler/implementation/snapshot/GenericSnapshotManager;\lASTORE 1\lL1\lLINENUMBER 328 L1\lALOAD 0\lALOAD 1\lINVOKESPECIAL org/prevayler/PrevaylerFactory.publisher (Lorg/prevayler/implementation/snapshot/GenericSnapshotManager;)Lorg/prevayler/implementation/publishing/TransactionPublisher;\lASTORE 2\lL2\lLINENUMBER 332 L2\lNEW org/prevayler/implementation/PrevaylerImpl\lDUP\lALOAD 1\lALOAD 2\lALOAD 0\lINVOKESPECIAL org/prevayler/PrevaylerFactory.journalSerializer ()Lorg/prevayler/foundation/serialization/Serializer;\lALOAD 0\lGETFIELD org/prevayler/PrevaylerFactory._transactionDeepCopyMode : Z\lLDC \"cd090656-92a5-4134-ad24-3ef4e85afa8b\"\lINVOKESTATIC edu/cmu/cs/mvelezce/tool/analysis/region/Regions.exit (Ljava/lang/String;)V\lINVOKESPECIAL org/prevayler/implementation/PrevaylerImpl.\<init\> (Lorg/prevayler/implementation/snapshot/GenericSnapshotManager;Lorg/prevayler/implementation/publishing/TransactionPublisher;Lorg/prevayler/foundation/serialization/Serializer;Z)V\lARETURN\l"];
-entry;
-exit;
-entry -> 894086915;
-894086915 -> exit;
-894086915[fontcolor="purple", penwidth=3, color="purple"];
-}

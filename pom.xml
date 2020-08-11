@@ -4,9 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>edu.cmu.cs.mvelezce</groupId>
-    <artifactId>ConfigCrusher</artifactId>
-    <version>0.2.0-SNAPSHOT</version>
-    <inceptionYear>2017</inceptionYear>
+    <artifactId>Comprex</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <inceptionYear>2019</inceptionYear>
     <modules>
         <module>cc-adapters</module>
         <!--        <module>cc-core</module>-->
@@ -27,7 +27,7 @@
         <module>cc-analysis-partition</module>
     </modules>
     <packaging>pom</packaging>
-    <name>ConfigCrusher</name>
+    <name>Comprex</name>
     <url>http://www.cs.cmu.edu/~mvelezce/</url>
 
     <properties>
