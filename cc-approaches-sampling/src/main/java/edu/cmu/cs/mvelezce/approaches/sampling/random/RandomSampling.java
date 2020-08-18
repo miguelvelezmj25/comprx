@@ -35,7 +35,7 @@ public final class RandomSampling implements SamplingApproach {
 
   @Override
   public String getLinearModelType() {
-    return "interactions";
+    return "linear";
   }
 
   @Override
