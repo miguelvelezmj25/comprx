@@ -25,6 +25,7 @@
         <module>cc-perf-model-e2e</module>
         <module>cc-scripts</module>
         <module>cc-analysis-partition</module>
+        <module>cc-plots</module>
     </modules>
     <packaging>pom</packaging>
     <name>Comprex</name>
