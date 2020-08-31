@@ -1,19 +1,19 @@
-interpret_approaches = ["Comprex"; "LR & R200"];
+interpret_approaches = ["Comprex"; "R200 & LR"; "R50 & LR"; "FW & LR"; "PW & LR"];
 interpret_cost = [41.4 41.3];
 interpret_mape = [5.0 14.9];
 
-not_interpret_approaches = ["RF & R200"];
+not_interpret_approaches = ["R50 & RF"; "R200 & RF"; "FW & RF"; "PW & RF"];
 not_interpret_cost = [36.4];
 not_interpret_mape = [1.1];
 
 plot(interpret_cost, interpret_mape, '+', not_interpret_cost, not_interpret_mape, 'x', 'LineWidth', 2 ,'MarkerSize',16);
 
 title('Berkeley DB', 'Fontsize',80);
-xlabel('Cost (m)');
+xlabel('Cost (minutes)');
 ylabel('Accuracy (MAPE)');
 
-xlim([36.0, 43.0]);
-ylim([0.5, 16]);
+xlim([0.0, 43.0]);
+ylim([0.0, 16]);
 
 set(gca,'FontSize',20);
 
