@@ -3,6 +3,7 @@ package edu.cmu.cs.mvelezce.java.execute.sampling.idta.profiler.jprofiler;
 import com.mijecu25.meme.utils.execute.Executor;
 import edu.cmu.cs.mvelezce.java.execute.BaseExecutor;
 import edu.cmu.cs.mvelezce.java.execute.adapters.ExecutorAdapter;
+import edu.cmu.cs.mvelezce.java.execute.parser.BaseRawExecutionParser;
 import edu.cmu.cs.mvelezce.java.execute.sampling.adapters.convert.profiler.jprofiler.JProfilerSamplingConvertExecutorAdapter;
 import edu.cmu.cs.mvelezce.java.execute.sampling.adapters.indexFiles.profiler.jprofiler.JProfilerSamplingIndexFilesAdapter;
 import edu.cmu.cs.mvelezce.java.execute.sampling.adapters.measureDiskOrderedScan.profiler.jprofiler.JProfilerSamplingMeasureDiskOrderedScanAdapter;
@@ -31,7 +32,7 @@ public class IDTAJProfilerSamplingExecutor extends BaseExecutor<RawJProfilerSamp
     this(programName, new HashSet<>(), 0, threadStatus);
   }
 
-  IDTAJProfilerSamplingExecutor(
+  public IDTAJProfilerSamplingExecutor(
       String programName,
       Set<Set<String>> configurations,
       int waitAfterExecution,
@@ -44,6 +45,21 @@ public class IDTAJProfilerSamplingExecutor extends BaseExecutor<RawJProfilerSamp
             OUTPUT_DIR + "/" + getMeasuredTimeFromThreadStatus(threadStatus),
             threadStatus),
         waitAfterExecution);
+
+    this.threadStatus = threadStatus;
+  }
+
+  public IDTAJProfilerSamplingExecutor(
+          String programName,
+          Set<Set<String>> configurations,
+          BaseRawExecutionParser<RawJProfilerSamplingPerfExecution> baseRawExecutionParser,
+          int waitAfterExecution,
+          String threadStatus) {
+    super(
+            programName,
+            configurations,
+            baseRawExecutionParser,
+            waitAfterExecution);
 
     this.threadStatus = threadStatus;
   }
@@ -62,6 +78,10 @@ public class IDTAJProfilerSamplingExecutor extends BaseExecutor<RawJProfilerSamp
 
   public static String getOS() {
     return System.getProperty("os.name");
+  }
+
+  public String getThreadStatus() {
+    return threadStatus;
   }
 
   @Override
